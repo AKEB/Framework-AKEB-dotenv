@@ -20,7 +20,7 @@ for version in ${versions}; do
 	CMD="${CMD} composer install --prefer-install=auto --no-interaction;"
 	CMD="${CMD} composer update --prefer-install=auto --no-interaction > /dev/null 2>&1;"
 
-	CMD="${CMD} php ./vendor/bin/phpunit "
+	CMD="${CMD} php${version} ./vendor/bin/phpunit "
 	CMD="${CMD} --no-coverage"
 	CMD="${CMD} -c ./phpunit_${version}.xml"
 
