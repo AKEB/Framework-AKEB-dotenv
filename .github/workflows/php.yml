@@ -75,7 +75,7 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-install=auto --no-interaction
       - name: Run Tests
-        run: php vendor/bin/phpunit --coverage-text --colors=never -c phpunit.xml
+        run: XDEBUG_MODE=coverage php -n -dzend_extension=xdebug vendor/bin/phpunit --coverage-text --colors=never -c phpunit.xml
   test_8_2:
     runs-on: ubuntu-latest
     container: babadzhanyan/php-fpm:8.2
@@ -86,7 +86,7 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-install=auto --no-interaction
       - name: Run Tests
-        run: php vendor/bin/phpunit --coverage-text --colors=never -c phpunit.xml
+        run: XDEBUG_MODE=coverage php -n -dzend_extension=xdebug vendor/bin/phpunit --coverage-text --colors=never -c phpunit.xml
   test_8_3:
     runs-on: ubuntu-latest
     container: babadzhanyan/php-fpm:8.3
@@ -97,4 +97,4 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-install=auto --no-interaction
       - name: Run Tests
-        run: php vendor/bin/phpunit --coverage-text --colors=never -c phpunit.xml
+        run: XDEBUG_MODE=coverage php -n -dzend_extension=xdebug vendor/bin/phpunit --coverage-text --colors=never -c phpunit.xml
