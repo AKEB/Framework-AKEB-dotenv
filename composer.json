@@ -1,0 +1,31 @@
+{
+	"authors": [
+		{
+			"email": "vadimakeb@gmail.com",
+			"name": "Vadim Babadzhanyan",
+			"role": "Lead"
+		}
+	],
+	"autoload": {
+		"classmap": [
+			"./src/"
+		]
+	},
+	"description": "Donenv",
+	"license": "Apache-2.0",
+	"name": "akeb/dotenv",
+	"version": "1.0.0",
+	"support": {
+		"email": "vadimakeb@gmail.com",
+		"issues": "https://github.com/AKEB/dotenv/issues",
+		"wiki": "https://github.com/AKEB/dotenv/wiki",
+		"source": "https://github.com/AKEB/dotenv"
+	},
+	"type": "library",
+	"require": {
+		"php": ">=7.1"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "@stable"
+	}
+}

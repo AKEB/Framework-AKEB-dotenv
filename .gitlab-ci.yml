@@ -1,0 +1,62 @@
+before_script:
+  - export https_proxy=http://m100.cache.pvt:3128
+  - export http_proxy=http://m100.cache.pvt:3128
+  - if [ -n "$GH_TOKEN" ]; then composer config github-oauth.github.com ${GH_TOKEN}; fi;
+  - composer install --prefer-install=auto --no-interaction
+
+test:7.1:
+  image: babadzhanyan/php-fpm:7.1
+  tags:
+    - mrgs
+  script:
+    - php vendor/bin/phpunit --coverage-text --colors=never -c phpunit.xml
+
+
+test:7.2:
+  image: babadzhanyan/php-fpm:7.2
+  tags:
+    - mrgs
+  script:
+    - php vendor/bin/phpunit --coverage-text --colors=never -c phpunit.xml
+
+test:7.3:
+  image: babadzhanyan/php-fpm:7.3
+  tags:
+    - mrgs
+  script:
+    - php vendor/bin/phpunit --coverage-text --colors=never -c phpunit.xml
+
+test:7.4:
+  image: babadzhanyan/php-fpm:7.4
+  tags:
+    - mrgs
+  script:
+    - php vendor/bin/phpunit --coverage-text --colors=never -c phpunit.xml
+
+test:8.0:
+  image: babadzhanyan/php-fpm:8.0
+  tags:
+    - mrgs
+  script:
+    - php vendor/bin/phpunit --coverage-text --colors=never -c phpunit.xml
+
+test:8.1:
+  image: babadzhanyan/php-fpm:8.1
+  tags:
+    - mrgs
+  script:
+    - php vendor/bin/phpunit --coverage-text --colors=never -c phpunit.xml
+
+test:8.2:
+  image: babadzhanyan/php-fpm:8.2
+  tags:
+    - mrgs
+  script:
+    - php vendor/bin/phpunit --coverage-text --colors=never -c phpunit.xml
+
+test:8.3:
+  image: babadzhanyan/php-fpm:8.3
+  tags:
+    - mrgs
+  script:
+    - php vendor/bin/phpunit --coverage-text --colors=never -c phpunit.xml
