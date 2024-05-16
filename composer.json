@@ -17,9 +17,9 @@
 	"version": "1.0.0",
 	"support": {
 		"email": "vadimakeb@gmail.com",
-		"issues": "https://github.com/AKEB/dotenv/issues",
-		"wiki": "https://github.com/AKEB/dotenv/wiki",
-		"source": "https://github.com/AKEB/dotenv"
+		"issues": "https://github.com/AKEB/Framework-AKEB-dotenv/issues",
+		"wiki": "https://github.com/AKEB/Framework-AKEB-dotenv/wiki",
+		"source": "https://github.com/AKEB/Framework-AKEB-dotenv"
 	},
 	"type": "library",
 	"require": {
