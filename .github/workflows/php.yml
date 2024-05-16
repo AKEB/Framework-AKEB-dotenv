@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-install=auto --no-interaction
       - name: Run Tests
-        run: XDEBUG_MODE=coverage php7.1 vendor/bin/phpunit --coverage-text --colors=never -c phpunit.xml
+        run: XDEBUG_MODE=coverage php7.1 vendor/bin/phpunit --coverage-text --colors=never -c phpunit_7.1.xml
   test_7_2:
     runs-on: ubuntu-latest
     container: babadzhanyan/php-fpm:7.2
@@ -31,7 +31,7 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-install=auto --no-interaction
       - name: Run Tests
-        run: XDEBUG_MODE=coverage php7.2 vendor/bin/phpunit --coverage-text --colors=never -c phpunit.xml
+        run: XDEBUG_MODE=coverage php7.2 vendor/bin/phpunit --coverage-text --colors=never -c phpunit_7.2.xml
   test_7_3:
     runs-on: ubuntu-latest
     container: babadzhanyan/php-fpm:7.3
@@ -42,7 +42,7 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-install=auto --no-interaction
       - name: Run Tests
-        run: XDEBUG_MODE=coverage php7.3 vendor/bin/phpunit --coverage-text --colors=never -c phpunit.xml
+        run: XDEBUG_MODE=coverage php7.3 vendor/bin/phpunit --coverage-text --colors=never -c phpunit_7.3.xml
   test_7_4:
     runs-on: ubuntu-latest
     container: babadzhanyan/php-fpm:7.4
@@ -53,7 +53,7 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-install=auto --no-interaction
       - name: Run Tests
-        run: XDEBUG_MODE=coverage php7.4 vendor/bin/phpunit --coverage-text --colors=never -c phpunit.xml
+        run: XDEBUG_MODE=coverage php7.4 vendor/bin/phpunit --coverage-text --colors=never -c phpunit_7.4.xml
   test_8_0:
     runs-on: ubuntu-latest
     container: babadzhanyan/php-fpm:8.0
@@ -64,7 +64,7 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-install=auto --no-interaction
       - name: Run Tests
-        run: XDEBUG_MODE=coverage php8.0 vendor/bin/phpunit --coverage-text --colors=never -c phpunit.xml
+        run: XDEBUG_MODE=coverage php8.0 vendor/bin/phpunit --coverage-text --colors=never -c phpunit_8.0.xml
   test_8_1:
     runs-on: ubuntu-latest
     container: babadzhanyan/php-fpm:8.1
@@ -75,7 +75,7 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-install=auto --no-interaction
       - name: Run Tests
-        run: XDEBUG_MODE=coverage php8.1 vendor/bin/phpunit --coverage-text --colors=never -c phpunit.xml
+        run: XDEBUG_MODE=coverage php8.1 vendor/bin/phpunit --coverage-text --colors=never -c phpunit_8.1.xml
   test_8_2:
     runs-on: ubuntu-latest
     container: babadzhanyan/php-fpm:8.2
@@ -86,7 +86,7 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-install=auto --no-interaction
       - name: Run Tests
-        run: XDEBUG_MODE=coverage php8.2 vendor/bin/phpunit --coverage-text --colors=never -c phpunit.xml
+        run: XDEBUG_MODE=coverage php8.2 vendor/bin/phpunit --coverage-text --colors=never -c phpunit_8.2.xml
   test_8_3:
     runs-on: ubuntu-latest
     container: babadzhanyan/php-fpm:8.3
@@ -97,4 +97,4 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-install=auto --no-interaction
       - name: Run Tests
-        run: XDEBUG_MODE=coverage php8.3 vendor/bin/phpunit --coverage-text --colors=never -c phpunit.xml
+        run: XDEBUG_MODE=coverage php8.3 vendor/bin/phpunit --coverage-text --colors=never -c phpunit_8.3.xml
