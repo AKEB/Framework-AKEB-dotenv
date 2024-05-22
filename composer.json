@@ -8,7 +8,7 @@
 	],
 	"autoload": {
 		"classmap": [
-			"./src/"
+			"src/"
 		]
 	},
 	"description": "Donenv",
