@@ -17,10 +17,13 @@ for version in ${versions}; do
 	mv ${lock_file} ${PWD}/composer.lock > /dev/null 2>&1
 	mv ${composer_folder} ${PWD}/vendor/ > /dev/null 2>&1
 	CMD=""
-	CMD="${CMD} composer install --prefer-install=auto --no-interaction;"
-	CMD="${CMD} composer update --prefer-install=auto --no-interaction > /dev/null 2>&1;"
 
-	CMD="${CMD} php${version} ./vendor/bin/phpunit "
+	# CMD="${CMD} apt-get install -y memcached 1>/dev/null 2>&1;"
+
+	CMD="${CMD} composer install --prefer-install=auto --no-interaction 1>/dev/null 2>&1;"
+	CMD="${CMD} composer update --prefer-install=auto --no-interaction 1>/dev/null 2>&1;"
+
+	CMD="${CMD} php ./vendor/bin/phpunit "
 	CMD="${CMD} --no-coverage"
 	CMD="${CMD} -c ./phpunit_${version}.xml"
 

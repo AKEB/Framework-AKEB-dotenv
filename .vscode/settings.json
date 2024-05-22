@@ -1,0 +1,10 @@
+{
+	"php.version": "8.3",
+	"files.exclude": {
+		"docker/composer/":true,
+	},
+	"code-runner.defaultLanguage": "php",
+	"code-runner.executorMap": {
+		"php": "\"$workspaceRoot/dockerRun.sh\" \"8.3\" \"$workspaceRoot\" $fullFileName"
+	}
+}
