@@ -27,7 +27,7 @@ for version in ${versions}; do
 	CMD="${CMD} --no-coverage"
 	CMD="${CMD} -c ./phpunit_${version}.xml"
 
-	docker run --rm -v "$PWD":/opt -w /opt babadzhanyan/php-fpm:${version} /bin/bash -c "${CMD}"
+	docker run --rm -v "$PWD":/opt -w /opt akeb/php-fpm:${version} /bin/bash -c "${CMD}"
 
 	mv ${PWD}/composer.lock ${lock_file} > /dev/null 2>&1
 	mv ${PWD}/vendor/ ${composer_folder} > /dev/null 2>&1

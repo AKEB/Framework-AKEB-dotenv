@@ -33,7 +33,7 @@ CMD="${CMD} composer update --prefer-install=auto --no-interaction 1>/dev/null 2
 
 CMD="${CMD} php ${SCRIPT_DIR}${FILE_NAME} "
 
-docker run --rm -v "${HOST_DIR}":/opt -w /opt babadzhanyan/php-fpm:${version} /bin/bash -c "${CMD}"
+docker run --rm -v "${HOST_DIR}":/opt -w /opt akeb/php-fpm:${version} /bin/bash -c "${CMD}"
 
 mv ${HOST_DIR}/composer.lock ${lock_file} > /dev/null 2>&1
 mv ${HOST_DIR}/vendor/ ${composer_folder} > /dev/null 2>&1
